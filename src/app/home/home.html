@@ -1,0 +1,66 @@
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <section id="main">
+        <header>
+            <span class="avatar"><img ng-src="{{vm.my.photoUrl}}" alt="" /></span>
+            <h1 ng-bind="vm.my.name"></h1>
+            <p ng-bind="vm.my.position"></p>
+        </header>
+        <!--
+        <hr />
+        <h2>Extra Stuff!</h2>
+        <form method="post" action="#">
+            <div class="field">
+                <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="field">
+                <input type="email" name="email" id="email" placeholder="Email" />
+            </div>
+            <div class="field">
+                <div class="select-wrapper">
+                    <select name="department" id="department">
+                        <option value="">Department</option>
+                        <option value="sales">Sales</option>
+                        <option value="tech">Tech Support</option>
+                        <option value="null">/dev/null</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+            </div>
+            <div class="field">
+                <input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+            </div>
+            <div class="field">
+                <label>But are you a robot?</label>
+                <input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+                <input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+            </div>
+            <ul class="actions">
+                <li><a href="#" class="button">Get Started</a></li>
+            </ul>
+        </form>
+        <hr />
+        -->
+        <footer>
+            <ul class="icons">
+                <li ng-if="vm.my.email"><a ng-click="vm.mail(true)" href="" title="Say Hi!" class="fa-envelope">E-mail</a></li>
+                <li ng-if="vm.my.links.twitter"><a ng-href="{{vm.my.links.twitter}}" title="My Twitter profile" class="fa-twitter">Twitter</a></li>
+                <li ng-if="vm.my.links.linkedin"><a ng-href="{{vm.my.links.linkedin}}" title="My LinkedIn" class="fa-linkedin">LinkedIn</a></li>
+                <li ng-if="vm.my.links.instagram"><a ng-href="{{vm.my.links.instagram}}" title="My Instagram"  class="fa-instagram">Instagram</a></li>
+                <li ng-if="vm.my.links.facebook"><a ng-href="{{vm.my.links.facebook}}" title="My Facebook"  class="fa-facebook">Facebook</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li ng-bind="vm.my.copyright"></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+</div>
