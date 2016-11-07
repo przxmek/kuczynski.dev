@@ -10,6 +10,7 @@ class Data {
                 photoUrl: 'images/avatar.jpg',
                 links: {
                     facebook: 'https://fb.com/pomylilomisie',
+                    github: 'https://github.com/przxmek',
                     instagram: 'https://instagr.am/pomylilomisie',
                     linkedin: 'https://linkedin.com/in/pomylilomisie',
                     twitter: null,

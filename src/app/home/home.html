@@ -48,6 +48,7 @@
         <footer>
             <ul class="icons">
                 <li ng-if="vm.my.email"><a ng-click="vm.mail(true)" href="" title="Say Hi!" class="fa-envelope">E-mail</a></li>
+                <li ng-if="vm.my.links.github"><a href="{{vm.my.links.github}}" title="My GitHub" class="fa-github-alt">GitHub</a></li>
                 <li ng-if="vm.my.links.twitter"><a ng-href="{{vm.my.links.twitter}}" title="My Twitter profile" class="fa-twitter">Twitter</a></li>
                 <li ng-if="vm.my.links.linkedin"><a ng-href="{{vm.my.links.linkedin}}" title="My LinkedIn" class="fa-linkedin">LinkedIn</a></li>
                 <li ng-if="vm.my.links.instagram"><a ng-href="{{vm.my.links.instagram}}" title="My Instagram"  class="fa-instagram">Instagram</a></li>
