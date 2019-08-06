@@ -4,12 +4,12 @@ export default class HomeController {
         this.$window = $window
     }
 
-    mail(same_window=false) {
-        let target = same_window ? "_self" : "_blank" ;
+    mail(same_window = false) {
+        let target = same_window ? "_self" : "_blank";
         let subject = "Hello";
         let message = "Hello from the other side!";
 
-        this.$window.open("mailto:"+ this.my.email + "?subject=" + subject + "&body=" + message , target);
+        this.$window.open("mailto:" + this.my.email + "?subject=" + subject + "&body=" + message, target);
     }
 }
 

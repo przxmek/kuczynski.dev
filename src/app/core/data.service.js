@@ -6,13 +6,13 @@ class Data {
             home: {
                 name: 'Przemek Kuczyński',
                 position: 'Software Engineer | Adventurer',
-                email: 'przemek@pkuczynski.pl',
+                email: 'przemek@kuczynski.dev',
                 photoUrl: 'images/avatar.jpg',
                 links: {
                     facebook: 'https://fb.com/pomylilomisie',
                     github: 'https://github.com/przxmek',
                     instagram: 'https://instagr.am/pomylilomisie',
-                    linkedin: 'https://linkedin.com/in/pomylilomisie',
+                    linkedin: 'https://linkedin.com/in/przekuczynski',
                     twitter: null,
                 },
                 copyright: '© Przemek Kuczyński'
