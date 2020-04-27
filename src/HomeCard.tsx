@@ -156,8 +156,8 @@ const HomeCard: React.FunctionComponent = () => {
         <div>
           <IconButton
             onClick={emailAction}
+            component="a"
             className={classes.button}
-            href="mailto:"
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </IconButton>
