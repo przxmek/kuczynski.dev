@@ -1,27 +1,40 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import {
+  makeStyles,
+  Theme,
+  createStyles,
+  ThemeProvider,
+} from '@material-ui/core';
 
-import logo from './logo.svg';
-import './App.css';
+import theme from './themes/defaultTheme';
 
-function App() {
+import HomeCard from './HomeCard';
+
+const useStyles = makeStyles((theme: Theme) => createStyles({
+  root: {
+    backgroundImage: 'linear-gradient(45deg, #3B3B7A 0%, #91617E 100%)',
+    width: '100vw',
+    height: '100vh',
+  },
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+  },
+}));
+
+const App: React.FunctionComponent = () => {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Button
-          variant="contained"
-          color="primary"
-          // href="https://reactjs.org"
-          // target="_blank"
-        >
-          Learn React 2
-        </Button>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className={classes.root}>
+        <div className={classes.wrapper}>
+          <HomeCard />
+        </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
