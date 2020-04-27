@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import Tilt from 'react-parallax-tilt';
 
-import AvatarImg from "./static/avatar.jpg";
+import AvatarImg from "./static/avatar2.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
