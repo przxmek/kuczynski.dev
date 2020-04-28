@@ -9,7 +9,7 @@ import Routes from './Routes';
 const App: React.FunctionComponent = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Routes />
       </Router>
     </ThemeProvider>
