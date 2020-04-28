@@ -1,5 +1,9 @@
 import React from 'react';
 import { Switch, Redirect, Route } from "react-router-dom";
+import { RouteWithLayout } from './components';
+import {
+  SilverCardLayout
+} from './layouts';
 import {
   HomeView,
   NotFoundView,
@@ -9,19 +13,17 @@ import {
 const Routes = () => {
   return (
     <Switch>
-      <Route
+      <RouteWithLayout
         exact
         path='/'
-        render={() => (
-          <HomeView />
-        )}
+        component={HomeView}
+        layout={SilverCardLayout}
       />
-      <Route
+      <RouteWithLayout
         exact
         path='/sign-in'
-        render={() => (
-          <SignInView />
-        )}
+        component={SignInView}
+        layout={SilverCardLayout}
       />
       <Route
         exact

@@ -1,0 +1,1 @@
+export { default as SilverCardLayout } from './SilverCard';

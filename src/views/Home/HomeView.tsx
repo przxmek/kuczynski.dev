@@ -6,8 +6,8 @@ import {
   Theme,
   createStyles,
   Avatar,
+  Box,
 } from '@material-ui/core';
-import Tilt from 'react-parallax-tilt';
 
 import AvatarImg from "static/avatar2.jpg";
 import { IconBar } from './components';
@@ -15,56 +15,7 @@ import { IconBar } from './components';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    backgroundImage: 'linear-gradient(45deg, #3B3B7A 0%, #91617E 100%)',
-    width: '100vw',
-    height: '100vh',
-  },
-  wrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '100vh',
-  },
-  card: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
     textAlign: 'center',
-    [theme.breakpoints.only('xs')]: {
-      width: '16rem',
-    },
-    [theme.breakpoints.only('sm')]: {
-      width: '22rem',
-    },
-    [theme.breakpoints.only('md')]: {
-      width: '28rem',
-    },
-    [theme.breakpoints.only('lg')]: {
-      width: '32rem',
-    },
-    [theme.breakpoints.only('xl')]: {
-      width: '36rem',
-    },
-    margin: theme.spacing(2),
-    padding: theme.spacing(4),
-
-    backgroundImage: 'linear-gradient(30deg, rgba(255,255,255,0.522) 15%, #FFFFFF 59%)',
-    boxShadow: '0rem 1.25rem 2.625rem 0.375rem rgba(0,0,0,0.18)',
-    borderRadius: '0.5rem 0.5rem 0.5rem 0.5rem',
-    transition: 'opacity 1.125s ease 0.5s,transform 1.125s ease 0.5s',
-
-    backgroundPosition: '0% 0%',
-    backgroundRepeat: 'repeat',
-    backgroundSize: 'cover',
-
-    '& > *': {
-      marginTop: '0.625rem',
-      marginBottom: '0.625rem',
-    },
-    '& > :first-child': {
-      marginTop: '0 !important',
-    },
   },
   avatar: {
     [theme.breakpoints.only('xs')]: {
@@ -114,44 +65,37 @@ const HomeView: React.FunctionComponent = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <div className={classes.wrapper}>
-        <Tilt
-          tiltMaxAngleX={5}
-          tiltMaxAngleY={3}
-          transitionSpeed={16000}
-          gyroscope
-          perspective={2000}
-          trackOnWindow
-        >
-          <div className={classes.card}>
-            <Avatar
-              alt="Picture of Przemek"
-              src={AvatarImg}
-              className={classes.avatar}
-            />
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      textAlign="center"
+    >
+      <Avatar
+        alt="Picture of Przemek"
+        src={AvatarImg}
+        className={classes.avatar}
+      />
 
-            <Typography
-              variant='h1'
-              className={classes.textName}
-            >
-              Przemek Kuczyński
+      <Typography
+        variant='h1'
+        className={classes.textName}
+      >
+        Przemek Kuczyński
             </Typography>
 
-            <Typography
-              variant='body1'
-              className={classes.textDesc}
-            >
-              Software Engineer | Adventurer
+      <Typography
+        variant='body1'
+        className={classes.textDesc}
+      >
+        Software Engineer | Adventurer
             </Typography>
-            
-            <Divider className={classes.divider} />
 
-            <IconBar />
-          </div>
-        </Tilt>
-      </div>
-    </div>
+      <Divider className={classes.divider} />
+
+      <IconBar />
+    </Box>
   );
 }
 
