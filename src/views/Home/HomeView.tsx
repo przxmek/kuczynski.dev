@@ -4,7 +4,6 @@ import {
   Typography,
   Divider,
   Theme,
-  createStyles,
   Avatar,
   Box,
 } from '@material-ui/core';
@@ -13,9 +12,33 @@ import AvatarImg from "static/avatar2.jpg";
 import { IconBar } from './components';
 
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     textAlign: 'center',
+
+    '& > *': {
+      marginTop: '0.625rem',
+      marginBottom: '0.625rem',
+    },
+    '& > :first-child': {
+      marginTop: '0 !important',
+    },
+    
+    [theme.breakpoints.only('xs')]: {
+      width: '16rem',
+    },
+    [theme.breakpoints.only('sm')]: {
+      width: '22rem',
+    },
+    [theme.breakpoints.only('md')]: {
+      width: '28rem',
+    },
+    [theme.breakpoints.only('lg')]: {
+      width: '32rem',
+    },
+    [theme.breakpoints.only('xl')]: {
+      width: '36rem',
+    },
   },
   avatar: {
     [theme.breakpoints.only('xs')]: {
@@ -38,6 +61,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
       width: '7em',
       height: '7em',
     },
+    marginBottom: theme.spacing(1.25),
   },
   textName: {
     color: 'rgba(40,40,43,0.6)',
@@ -45,6 +69,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     width: '100%',
     lineHeight: '1.25',
     fontWeight: 200,
+    margin: theme.spacing(1.25, 0),
   },
   textDesc: {
     color: 'rgba(40,40,43,0.55)',
@@ -53,6 +78,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     width: '100%',
     lineHeight: '1.5',
     fontWeight: 200,
+    margin: theme.spacing(1.25, 0),
   },
   divider: {
     backgroundColor: 'rgba(40,40,43,0.149)',
@@ -71,6 +97,7 @@ const HomeView: React.FunctionComponent = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
+      className={classes.root}
     >
       <Avatar
         alt="Picture of Przemek"
@@ -83,14 +110,14 @@ const HomeView: React.FunctionComponent = () => {
         className={classes.textName}
       >
         Przemek Kuczyński
-            </Typography>
+      </Typography>
 
       <Typography
         variant='body1'
         className={classes.textDesc}
       >
         Software Engineer | Adventurer
-            </Typography>
+      </Typography>
 
       <Divider className={classes.divider} />
 

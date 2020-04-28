@@ -2,7 +2,6 @@ import React from 'react';
 import {
   makeStyles,
   Theme,
-  createStyles,
   IconButton,
 } from '@material-ui/core';
 import {
@@ -19,10 +18,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
+const useStyles = makeStyles((theme: Theme) => ({
   button: {
-    width: '2rem',
-    height: '2rem',
+    width: theme.spacing(7),
+    height: theme.spacing(7),
     margin: '0.375rem',
     backgroundColor: 'rgba(40,40,43,0.051)',
     transition: '0.3s',

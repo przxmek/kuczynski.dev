@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import {
-  makeStyles, 
+  makeStyles,
 } from '@material-ui/core';
 import Tilt from 'react-parallax-tilt';
 
@@ -17,25 +17,6 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
   },
   card: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    [theme.breakpoints.only('xs')]: {
-      width: '16rem',
-    },
-    [theme.breakpoints.only('sm')]: {
-      width: '22rem',
-    },
-    [theme.breakpoints.only('md')]: {
-      width: '28rem',
-    },
-    [theme.breakpoints.only('lg')]: {
-      width: '32rem',
-    },
-    [theme.breakpoints.only('xl')]: {
-      width: '36rem',
-    },
     margin: theme.spacing(2),
     padding: theme.spacing(4),
 
@@ -47,17 +28,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: '0% 0%',
     backgroundRepeat: 'repeat',
     backgroundSize: 'cover',
-
-    '& > *': {
-      marginTop: '0.625rem',
-      marginBottom: '0.625rem',
-    },
-    '& > :first-child': {
-      marginTop: '0 !important',
-    },
-  },
-  content: {
-
   },
 }));
 
@@ -81,9 +51,9 @@ const SilverCardLayout: FunctionComponent<Props> = (props) => {
           perspective={2000}
           trackOnWindow
         >
-          <div className={classes.card}>
-            <main className={classes.content}>{children}</main>
-          </div>
+          <main className={classes.card}>
+            {children}
+          </main>
         </Tilt>
       </div>
     </div>
